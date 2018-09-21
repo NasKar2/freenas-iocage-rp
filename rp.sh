@@ -184,6 +184,8 @@ else
    iocage exec ${JAIL_NAME} -- openssl dhparam -out /usr/local/etc/nginx/ssl/dhparam.pem 2048 
    echo "dhparam done"
    iocage exec ${JAIL_NAME} cp -f /mnt/configs/nginx.conf /usr/local/etc/nginx/nginx.conf
+#   iocage exec ${JAIL_NAME} cp -f /usr/local/etc/nginx/nginx.conf-dist /usr/local/etc/nginx/nginx.conf
+
 fi
 
 iocage exec ${JAIL_NAME} cp -f /mnt/configs/proxy_setup.conf /usr/local/etc/nginx/proxy_setup.conf
